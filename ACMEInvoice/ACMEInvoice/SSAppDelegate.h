@@ -12,4 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, strong) NSString *businessName;
+@property (nonatomic, strong) NSString *addressLine1;
+@property (nonatomic, strong) NSString *addressLine2;
+@property (nonatomic, strong) NSString *addressLine3;
+@property (nonatomic, strong) NSNumber *taxRate;
+
 @end

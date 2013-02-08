@@ -18,11 +18,7 @@
 		BD5B82C816C56F5D007CEF0D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82C716C56F5D007CEF0D /* Default-568h@2x.png */; };
 		BD5B82CB16C56F5D007CEF0D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82C916C56F5D007CEF0D /* MainStoryboard.storyboard */; };
 		BD5B82CE16C56F5D007CEF0D /* SSInvoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B82CD16C56F5D007CEF0D /* SSInvoiceViewController.m */; };
-		BD5B82D016C56F5D007CEF0D /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82CF16C56F5D007CEF0D /* first.png */; };
-		BD5B82D216C56F5D007CEF0D /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82D116C56F5D007CEF0D /* first@2x.png */; };
 		BD5B82D516C56F5D007CEF0D /* SSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B82D416C56F5D007CEF0D /* SSProfileViewController.m */; };
-		BD5B82D716C56F5D007CEF0D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82D616C56F5D007CEF0D /* second.png */; };
-		BD5B82D916C56F5D007CEF0D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82D816C56F5D007CEF0D /* second@2x.png */; };
 		BD5B82E116C56F5E007CEF0D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5B82E016C56F5E007CEF0D /* SenTestingKit.framework */; };
 		BD5B82E216C56F5E007CEF0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5B82B116C56F5D007CEF0D /* UIKit.framework */; };
 		BD5B82E316C56F5E007CEF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5B82B316C56F5D007CEF0D /* Foundation.framework */; };
@@ -34,6 +30,13 @@
 		BD5B82FE16C5758D007CEF0D /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82FD16C5758D007CEF0D /* Default-Portrait@2x~ipad.png */; };
 		BD5B830016C57595007CEF0D /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82FF16C57595007CEF0D /* Default-Landscape~ipad.png */; };
 		BD5B830216C57599007CEF0D /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B830116C57599007CEF0D /* Default-Landscape@2x~ipad.png */; };
+		BD5B830616C58418007CEF0D /* 104-index-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B830416C58418007CEF0D /* 104-index-cards.png */; };
+		BD5B830716C58418007CEF0D /* 104-index-cards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B830516C58418007CEF0D /* 104-index-cards@2x.png */; };
+		BD5B830A16C585FD007CEF0D /* 172-pricetag.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B830816C585FD007CEF0D /* 172-pricetag.png */; };
+		BD5B830B16C585FD007CEF0D /* 172-pricetag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B830916C585FD007CEF0D /* 172-pricetag@2x.png */; };
+		BD5B830E16C589BA007CEF0D /* Invoice_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B830C16C589BA007CEF0D /* Invoice_background.png */; };
+		BD5B830F16C589BA007CEF0D /* Invoice_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B830D16C589BA007CEF0D /* Invoice_background@2x.png */; };
+		BD5B831216C591A3007CEF0D /* SSPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B831116C591A3007CEF0D /* SSPaymentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +66,8 @@
 		BD5B82CA16C56F5D007CEF0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BD5B82CC16C56F5D007CEF0D /* SSInvoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSInvoiceViewController.h; sourceTree = "<group>"; };
 		BD5B82CD16C56F5D007CEF0D /* SSInvoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSInvoiceViewController.m; sourceTree = "<group>"; };
-		BD5B82CF16C56F5D007CEF0D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		BD5B82D116C56F5D007CEF0D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		BD5B82D316C56F5D007CEF0D /* SSProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSProfileViewController.h; sourceTree = "<group>"; };
 		BD5B82D416C56F5D007CEF0D /* SSProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSProfileViewController.m; sourceTree = "<group>"; };
-		BD5B82D616C56F5D007CEF0D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		BD5B82D816C56F5D007CEF0D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		BD5B82DF16C56F5E007CEF0D /* ACMEInvoiceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACMEInvoiceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5B82E016C56F5E007CEF0D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BD5B82E816C56F5E007CEF0D /* ACMEInvoiceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ACMEInvoiceTests-Info.plist"; sourceTree = "<group>"; };
@@ -81,6 +80,14 @@
 		BD5B82FD16C5758D007CEF0D /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		BD5B82FF16C57595007CEF0D /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		BD5B830116C57599007CEF0D /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		BD5B830416C58418007CEF0D /* 104-index-cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "104-index-cards.png"; sourceTree = "<group>"; };
+		BD5B830516C58418007CEF0D /* 104-index-cards@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "104-index-cards@2x.png"; sourceTree = "<group>"; };
+		BD5B830816C585FD007CEF0D /* 172-pricetag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "172-pricetag.png"; sourceTree = "<group>"; };
+		BD5B830916C585FD007CEF0D /* 172-pricetag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "172-pricetag@2x.png"; sourceTree = "<group>"; };
+		BD5B830C16C589BA007CEF0D /* Invoice_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Invoice_background.png; sourceTree = "<group>"; };
+		BD5B830D16C589BA007CEF0D /* Invoice_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Invoice_background@2x.png"; sourceTree = "<group>"; };
+		BD5B831016C591A3007CEF0D /* SSPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPaymentViewController.h; sourceTree = "<group>"; };
+		BD5B831116C591A3007CEF0D /* SSPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPaymentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,12 +158,11 @@
 				BD5B82C916C56F5D007CEF0D /* MainStoryboard.storyboard */,
 				BD5B82CC16C56F5D007CEF0D /* SSInvoiceViewController.h */,
 				BD5B82CD16C56F5D007CEF0D /* SSInvoiceViewController.m */,
-				BD5B82CF16C56F5D007CEF0D /* first.png */,
-				BD5B82D116C56F5D007CEF0D /* first@2x.png */,
 				BD5B82D316C56F5D007CEF0D /* SSProfileViewController.h */,
 				BD5B82D416C56F5D007CEF0D /* SSProfileViewController.m */,
-				BD5B82D616C56F5D007CEF0D /* second.png */,
-				BD5B82D816C56F5D007CEF0D /* second@2x.png */,
+				BD5B831016C591A3007CEF0D /* SSPaymentViewController.h */,
+				BD5B831116C591A3007CEF0D /* SSPaymentViewController.m */,
+				BD5B830316C58418007CEF0D /* Assets */,
 				BD5B82B816C56F5D007CEF0D /* Supporting Files */,
 			);
 			path = ACMEInvoice;
@@ -193,6 +199,19 @@
 				BD5B82E916C56F5E007CEF0D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD5B830316C58418007CEF0D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BD5B830C16C589BA007CEF0D /* Invoice_background.png */,
+				BD5B830D16C589BA007CEF0D /* Invoice_background@2x.png */,
+				BD5B830416C58418007CEF0D /* 104-index-cards.png */,
+				BD5B830516C58418007CEF0D /* 104-index-cards@2x.png */,
+				BD5B830816C585FD007CEF0D /* 172-pricetag.png */,
+				BD5B830916C585FD007CEF0D /* 172-pricetag@2x.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,16 +291,18 @@
 				BD5B82C616C56F5D007CEF0D /* Default@2x.png in Resources */,
 				BD5B82C816C56F5D007CEF0D /* Default-568h@2x.png in Resources */,
 				BD5B82CB16C56F5D007CEF0D /* MainStoryboard.storyboard in Resources */,
-				BD5B82D016C56F5D007CEF0D /* first.png in Resources */,
-				BD5B82D216C56F5D007CEF0D /* first@2x.png in Resources */,
-				BD5B82D716C56F5D007CEF0D /* second.png in Resources */,
-				BD5B82D916C56F5D007CEF0D /* second@2x.png in Resources */,
 				BD5B82F816C5756F007CEF0D /* acme.png in Resources */,
 				BD5B82FA16C57574007CEF0D /* acme@2x.png in Resources */,
 				BD5B82FC16C57588007CEF0D /* Default-Portrait~ipad.png in Resources */,
 				BD5B82FE16C5758D007CEF0D /* Default-Portrait@2x~ipad.png in Resources */,
 				BD5B830016C57595007CEF0D /* Default-Landscape~ipad.png in Resources */,
 				BD5B830216C57599007CEF0D /* Default-Landscape@2x~ipad.png in Resources */,
+				BD5B830616C58418007CEF0D /* 104-index-cards.png in Resources */,
+				BD5B830716C58418007CEF0D /* 104-index-cards@2x.png in Resources */,
+				BD5B830A16C585FD007CEF0D /* 172-pricetag.png in Resources */,
+				BD5B830B16C585FD007CEF0D /* 172-pricetag@2x.png in Resources */,
+				BD5B830E16C589BA007CEF0D /* Invoice_background.png in Resources */,
+				BD5B830F16C589BA007CEF0D /* Invoice_background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +341,7 @@
 				BD5B82C216C56F5D007CEF0D /* SSAppDelegate.m in Sources */,
 				BD5B82CE16C56F5D007CEF0D /* SSInvoiceViewController.m in Sources */,
 				BD5B82D516C56F5D007CEF0D /* SSProfileViewController.m in Sources */,
+				BD5B831216C591A3007CEF0D /* SSPaymentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

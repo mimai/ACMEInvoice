@@ -10,6 +10,8 @@
 
 @interface SSProfileViewController ()
 
+@property (weak, nonatomic) IBOutlet UINavigationItem *saveButtonItem;
+
 @end
 
 @implementation SSProfileViewController

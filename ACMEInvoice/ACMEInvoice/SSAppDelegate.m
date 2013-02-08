@@ -13,6 +13,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.businessName = @"ACME Corporation";
+    self.addressLine1 = @"100 Main Street";
+    self.addressLine2 = @"Atown";
+    self.addressLine3 = @"BC, A1B2C3";
+    
+    self.taxRate = [NSNumber numberWithDouble:12.0f];
+    
     return YES;
 }
 							
@@ -41,6 +49,68 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark -- Launching from URL
+
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url{
+    
+    NSString *temp = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapes( NULL, (__bridge CFStringRef)[url absoluteString], (__bridge CFStringRef)@"");
+    NSArray *urlArray = [temp componentsSeparatedByString:@"?"];
+    
+    NSString *query = [urlArray objectAtIndex:1];
+    NSArray *queryPairs = [query componentsSeparatedByString:@"&"];
+    NSMutableDictionary *pairs = [NSMutableDictionary dictionary];
+    for (NSString *queryPair in queryPairs) {
+        NSArray *bits = [queryPair componentsSeparatedByString:@"="];
+        if ([bits count] != 2) { continue; }
+        
+        NSString *key = [[bits objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *value = [[bits objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        [pairs setObject:value forKey:key];
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data returned"
+                                                    message:[NSString stringWithFormat:@"%@", pairs]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString*)sourceApplication
+         annotation:(id)annotation{
+    
+    NSString *temp = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapes( NULL, (__bridge CFStringRef)[url absoluteString], (__bridge CFStringRef)@"");
+    NSArray *urlArray = [temp componentsSeparatedByString:@"?"];
+    
+    NSString *query = [urlArray objectAtIndex:1];
+    NSArray *queryPairs = [query componentsSeparatedByString:@"&"];
+    NSMutableDictionary *pairs = [NSMutableDictionary dictionary];
+    for (NSString *queryPair in queryPairs) {
+        NSArray *bits = [queryPair componentsSeparatedByString:@"="];
+        if ([bits count] != 2) { continue; }
+        
+        NSString *key = [[bits objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *value = [[bits objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        [pairs setObject:value forKey:key];
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data returned"
+                                                    message:[NSString stringWithFormat:@"%@", pairs]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
+    return YES;
 }
 
 @end
