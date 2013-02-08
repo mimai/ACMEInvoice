@@ -17,10 +17,10 @@
 		BD5B82C616C56F5D007CEF0D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82C516C56F5D007CEF0D /* Default@2x.png */; };
 		BD5B82C816C56F5D007CEF0D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82C716C56F5D007CEF0D /* Default-568h@2x.png */; };
 		BD5B82CB16C56F5D007CEF0D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82C916C56F5D007CEF0D /* MainStoryboard.storyboard */; };
-		BD5B82CE16C56F5D007CEF0D /* SSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B82CD16C56F5D007CEF0D /* SSFirstViewController.m */; };
+		BD5B82CE16C56F5D007CEF0D /* SSInvoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B82CD16C56F5D007CEF0D /* SSInvoiceViewController.m */; };
 		BD5B82D016C56F5D007CEF0D /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82CF16C56F5D007CEF0D /* first.png */; };
 		BD5B82D216C56F5D007CEF0D /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82D116C56F5D007CEF0D /* first@2x.png */; };
-		BD5B82D516C56F5D007CEF0D /* SSSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B82D416C56F5D007CEF0D /* SSSecondViewController.m */; };
+		BD5B82D516C56F5D007CEF0D /* SSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B82D416C56F5D007CEF0D /* SSProfileViewController.m */; };
 		BD5B82D716C56F5D007CEF0D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82D616C56F5D007CEF0D /* second.png */; };
 		BD5B82D916C56F5D007CEF0D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B82D816C56F5D007CEF0D /* second@2x.png */; };
 		BD5B82E116C56F5E007CEF0D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5B82E016C56F5E007CEF0D /* SenTestingKit.framework */; };
@@ -61,12 +61,12 @@
 		BD5B82C516C56F5D007CEF0D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BD5B82C716C56F5D007CEF0D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BD5B82CA16C56F5D007CEF0D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BD5B82CC16C56F5D007CEF0D /* SSFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSFirstViewController.h; sourceTree = "<group>"; };
-		BD5B82CD16C56F5D007CEF0D /* SSFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSFirstViewController.m; sourceTree = "<group>"; };
+		BD5B82CC16C56F5D007CEF0D /* SSInvoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSInvoiceViewController.h; sourceTree = "<group>"; };
+		BD5B82CD16C56F5D007CEF0D /* SSInvoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSInvoiceViewController.m; sourceTree = "<group>"; };
 		BD5B82CF16C56F5D007CEF0D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		BD5B82D116C56F5D007CEF0D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		BD5B82D316C56F5D007CEF0D /* SSSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSSecondViewController.h; sourceTree = "<group>"; };
-		BD5B82D416C56F5D007CEF0D /* SSSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSSecondViewController.m; sourceTree = "<group>"; };
+		BD5B82D316C56F5D007CEF0D /* SSProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSProfileViewController.h; sourceTree = "<group>"; };
+		BD5B82D416C56F5D007CEF0D /* SSProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSProfileViewController.m; sourceTree = "<group>"; };
 		BD5B82D616C56F5D007CEF0D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		BD5B82D816C56F5D007CEF0D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		BD5B82DF16C56F5E007CEF0D /* ACMEInvoiceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACMEInvoiceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,12 +149,12 @@
 				BD5B82C016C56F5D007CEF0D /* SSAppDelegate.h */,
 				BD5B82C116C56F5D007CEF0D /* SSAppDelegate.m */,
 				BD5B82C916C56F5D007CEF0D /* MainStoryboard.storyboard */,
-				BD5B82CC16C56F5D007CEF0D /* SSFirstViewController.h */,
-				BD5B82CD16C56F5D007CEF0D /* SSFirstViewController.m */,
+				BD5B82CC16C56F5D007CEF0D /* SSInvoiceViewController.h */,
+				BD5B82CD16C56F5D007CEF0D /* SSInvoiceViewController.m */,
 				BD5B82CF16C56F5D007CEF0D /* first.png */,
 				BD5B82D116C56F5D007CEF0D /* first@2x.png */,
-				BD5B82D316C56F5D007CEF0D /* SSSecondViewController.h */,
-				BD5B82D416C56F5D007CEF0D /* SSSecondViewController.m */,
+				BD5B82D316C56F5D007CEF0D /* SSProfileViewController.h */,
+				BD5B82D416C56F5D007CEF0D /* SSProfileViewController.m */,
 				BD5B82D616C56F5D007CEF0D /* second.png */,
 				BD5B82D816C56F5D007CEF0D /* second@2x.png */,
 				BD5B82B816C56F5D007CEF0D /* Supporting Files */,
@@ -318,8 +318,8 @@
 			files = (
 				BD5B82BE16C56F5D007CEF0D /* main.m in Sources */,
 				BD5B82C216C56F5D007CEF0D /* SSAppDelegate.m in Sources */,
-				BD5B82CE16C56F5D007CEF0D /* SSFirstViewController.m in Sources */,
-				BD5B82D516C56F5D007CEF0D /* SSSecondViewController.m in Sources */,
+				BD5B82CE16C56F5D007CEF0D /* SSInvoiceViewController.m in Sources */,
+				BD5B82D516C56F5D007CEF0D /* SSProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
