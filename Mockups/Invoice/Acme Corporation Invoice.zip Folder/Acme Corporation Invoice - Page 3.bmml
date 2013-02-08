@@ -1,0 +1,46 @@
+
+<mockup version="1.0" skin="sketch" measuredW="1338" measuredH="968" mockupW="1338" mockupH="968">
+	<controls>
+		<control controlID="26" controlTypeID="com.balsamiq.mockups::Canvas" w="1178" h="922" measuredH="922" measuredW="1178" x="123" y="22" zOrder="26" isInGroup="-1" locked="false" >
+			<controlProperties>
+			</controlProperties>
+		</control>
+		<control controlID="27" controlTypeID="com.balsamiq.mockups::TextInput" w="1027" h="58" measuredH="58" measuredW="1027" x="197" y="116" zOrder="27" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Profile</text>
+				<size>22</size>
+				<align>center</align>
+				<color>8554646</color>
+			</controlProperties>
+		</control>
+		<control controlID="28" controlTypeID="com.balsamiq.mockups::TextInput" w="470" h="50" measuredH="50" measuredW="470" x="720" y="223" zOrder="28" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>ACME Corporation</text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+		<control controlID="29" controlTypeID="com.balsamiq.mockups::Title" w="247" h="50" measuredH="50" measuredW="247" x="224" y="223" zOrder="29" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Business Name</text>
+				<size>34</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="30" controlTypeID="com.balsamiq.mockups::Button" w="83" h="35" measuredH="35" measuredW="83" x="1108" y="127" zOrder="30" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Save</text>
+				<size>16</size>
+				<align>center</align>
+			</controlProperties>
+		</control>
+		<control controlID="31" controlTypeID="com.balsamiq.mockups::MenuBar" w="1023" h="54" measuredH="54" measuredW="1023" x="199" y="812" zOrder="31" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Invoice, Settings</text>
+				<size>34</size>
+				<selectedIndex>1</selectedIndex>
+				<align>left</align>
+			</controlProperties>
+		</control>
+	</controls>
+</mockup>

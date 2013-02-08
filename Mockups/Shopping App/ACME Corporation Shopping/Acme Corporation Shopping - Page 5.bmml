@@ -1,0 +1,36 @@
+
+<mockup version="1.0" skin="sketch" measuredW="1338" measuredH="968" mockupW="1338" mockupH="968">
+	<controls>
+		<control controlID="71" controlTypeID="com.balsamiq.mockups::Canvas" w="519" h="149" measuredH="149" measuredW="519" x="478" y="339" zOrder="71" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<backgroundAlpha>1</backgroundAlpha>
+			</controlProperties>
+		</control>
+		<control controlID="72" controlTypeID="com.balsamiq.mockups::Title" w="305" h="53" measuredH="53" measuredW="305" x="585" y="115" zOrder="72" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Catalogue Item Cell</text>
+				<size>34</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="73" controlTypeID="com.balsamiq.mockups::Image" w="109" h="125" measuredH="125" measuredW="109" x="486" y="347" zOrder="73" isInGroup="-1" locked="false" >
+		</control>
+		<control controlID="74" controlTypeID="com.balsamiq.mockups::Title" w="320" h="27" measuredH="27" measuredW="320" x="653" y="428" zOrder="74" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Short description</text>
+				<size>22</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="75" controlTypeID="com.balsamiq.mockups::Title" w="244" h="41" measuredH="41" measuredW="244" x="615" y="362" zOrder="75" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Item name</text>
+				<size>34</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+	</controls>
+</mockup>

@@ -1,0 +1,74 @@
+
+<mockup version="1.0" skin="sketch" measuredW="1338" measuredH="968" mockupW="1338" mockupH="968">
+	<controls>
+		<control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" w="1178" h="922" measuredH="922" measuredW="1178" x="65" y="20" zOrder="0" isInGroup="-1" locked="false" >
+			<controlProperties>
+			</controlProperties>
+		</control>
+		<control controlID="1" controlTypeID="com.balsamiq.mockups::MenuBar" w="1023" h="54" measuredH="54" measuredW="1023" x="144" y="811" zOrder="1" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Invoice, Settings</text>
+				<size>34</size>
+				<selectedIndex>0</selectedIndex>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="2" controlTypeID="com.balsamiq.mockups::TextArea" w="324" h="140" measuredH="140" measuredW="324" x="168" y="139" zOrder="2" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>ACME Corporation
+1200 Main Street
+Vancouver, BC
+A0B1C2</text>
+				<size>24</size>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" w="812" h="50" measuredH="50" measuredW="812" x="182" y="379" zOrder="3" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Input</text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+		<control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" w="115" h="50" measuredH="50" measuredW="115" x="1021" y="379" zOrder="4" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Input</text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+		<control controlID="5" controlTypeID="com.balsamiq.mockups::Title" w="61" h="30" measuredH="30" measuredW="61" x="922" y="473" zOrder="5" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>HST</text>
+				<size>22</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="6" controlTypeID="com.balsamiq.mockups::Title" w="61" h="30" measuredH="30" measuredW="61" x="933" y="533" zOrder="6" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Total</text>
+				<size>22</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="7" controlTypeID="com.balsamiq.mockups::Button" w="250" h="64" measuredH="64" measuredW="250" x="887" y="697" zOrder="7" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Proceed to Payment</text>
+				<size>24</size>
+				<align>center</align>
+			</controlProperties>
+		</control>
+		<control controlID="8" controlTypeID="com.balsamiq.mockups::TextInput" w="115" h="50" measuredH="50" measuredW="115" x="1021" y="453" zOrder="8" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Input</text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+		<control controlID="9" controlTypeID="com.balsamiq.mockups::TextInput" w="115" h="50" measuredH="50" measuredW="115" x="1021" y="523" zOrder="9" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Input</text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+	</controls>
+</mockup>

@@ -1,0 +1,114 @@
+
+<mockup version="1.0" skin="sketch" measuredW="1338" measuredH="968" mockupW="1338" mockupH="968">
+	<controls>
+		<control controlID="37" controlTypeID="com.balsamiq.mockups::Image" w="200" h="200" measuredH="200" measuredW="200" x="537" y="273" zOrder="37" isInGroup="-1" locked="false" >
+		</control>
+		<control controlID="38" controlTypeID="com.balsamiq.mockups::TextInput" w="128" h="50" measuredH="50" measuredW="128" x="787" y="721" zOrder="38" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>1</text>
+				<size>34</size>
+			</controlProperties>
+		</control>
+		<control controlID="39" controlTypeID="com.balsamiq.mockups::Title" w="200" h="50" measuredH="50" measuredW="200" x="534" y="721" zOrder="39" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Quantity</text>
+				<size>34</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="40" controlTypeID="com.balsamiq.mockups::Canvas" w="634" h="751" measuredH="751" measuredW="634" x="378" y="158" zOrder="40" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<backgroundAlpha>1</backgroundAlpha>
+				<borderColor>0</borderColor>
+				<borderStyle>square</borderStyle>
+				<color>13421772</color>
+			</controlProperties>
+		</control>
+		<control controlID="41" controlTypeID="com.balsamiq.mockups::iPhoneMenu" w="320" h="386" measuredH="386" measuredW="320" x="414" y="263" zOrder="41" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>One%%0ATwo%%0AThree%%0A%%0A%%0A</text>
+				<size>16</size>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="42" controlTypeID="com.balsamiq.mockups::iPhoneMenu" w="101" h="386" measuredH="386" measuredW="101" x="761" y="263" zOrder="42" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>One%%0ATwo%%0AThree%%0A%%0A%%0A</text>
+				<size>16</size>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="43" controlTypeID="com.balsamiq.mockups::iPhoneMenu" w="101" h="386" measuredH="386" measuredW="101" x="882" y="263" zOrder="43" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>One%%0ATwo%%0AThree%%0A%%0A%%0A</text>
+				<size>16</size>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="44" controlTypeID="com.balsamiq.mockups::TextInput" w="100" h="50" measuredH="50" measuredW="100" x="883" y="658" zOrder="44" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text></text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+		<control controlID="45" controlTypeID="com.balsamiq.mockups::TextInput" w="100" h="50" measuredH="50" measuredW="100" x="883" y="721" zOrder="45" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text></text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+		<control controlID="46" controlTypeID="com.balsamiq.mockups::Canvas" w="634" h="82" measuredH="82" measuredW="634" x="378" y="159" zOrder="46" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<backgroundAlpha>1</backgroundAlpha>
+			</controlProperties>
+		</control>
+		<control controlID="47" controlTypeID="com.balsamiq.mockups::Button" w="250" h="48" measuredH="48" measuredW="250" x="734" y="804" zOrder="47" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Go to Payment</text>
+				<size>34</size>
+				<align>center</align>
+			</controlProperties>
+		</control>
+		<control controlID="48" controlTypeID="com.balsamiq.mockups::Title" w="71" h="44" measuredH="44" measuredW="71" x="663" y="183" zOrder="48" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Cart</text>
+				<size>34</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="49" controlTypeID="com.balsamiq.mockups::Title" w="38" h="21" measuredH="21" measuredW="38" x="761" y="672" zOrder="49" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Tax</text>
+				<size>22</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="50" controlTypeID="com.balsamiq.mockups::Title" w="50" h="21" measuredH="21" measuredW="50" x="761" y="732" zOrder="50" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Total</text>
+				<size>22</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="51" controlTypeID="com.balsamiq.mockups::Button" w="80" h="40" measuredH="40" measuredW="80" x="899" y="187" zOrder="51" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Edit</text>
+				<size>16</size>
+				<align>center</align>
+				<color>255</color>
+			</controlProperties>
+		</control>
+		<control controlID="52" controlTypeID="com.balsamiq.mockups::Button" w="80" h="40" measuredH="40" measuredW="80" x="414" y="187" zOrder="52" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Cancel</text>
+				<size>20</size>
+				<align>center</align>
+				<color>16711680</color>
+			</controlProperties>
+		</control>
+	</controls>
+</mockup>

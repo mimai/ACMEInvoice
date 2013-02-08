@@ -1,0 +1,47 @@
+
+<mockup version="1.0" skin="sketch" measuredW="1338" measuredH="968" mockupW="1338" mockupH="968">
+	<controls>
+		<control controlID="76" controlTypeID="com.balsamiq.mockups::Canvas" w="681" h="766" measuredH="766" measuredW="681" x="274" y="116" zOrder="76" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<backgroundAlpha>1</backgroundAlpha>
+			</controlProperties>
+		</control>
+		<control controlID="77" controlTypeID="com.balsamiq.mockups::TextInput" w="680" h="45" measuredH="45" measuredW="680" x="275" y="116" zOrder="77" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Profile</text>
+				<size>22</size>
+				<align>center</align>
+				<color>8554646</color>
+			</controlProperties>
+		</control>
+		<control controlID="78" controlTypeID="com.balsamiq.mockups::TextInput" w="329" h="50" measuredH="50" measuredW="329" x="616" y="223" zOrder="78" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>ACME Corporation</text>
+				<size>16</size>
+			</controlProperties>
+		</control>
+		<control controlID="79" controlTypeID="com.balsamiq.mockups::Title" w="247" h="50" measuredH="50" measuredW="247" x="289" y="223" zOrder="79" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Business Name</text>
+				<size>34</size>
+				<color>0</color>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="80" controlTypeID="com.balsamiq.mockups::Button" w="62" h="37" measuredH="37" measuredW="62" x="882" y="120" zOrder="80" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Done</text>
+				<size>16</size>
+				<align>center</align>
+			</controlProperties>
+		</control>
+		<control controlID="81" controlTypeID="com.balsamiq.mockups::Button" w="98" h="37" measuredH="37" measuredW="98" x="284" y="120" zOrder="81" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Cancel</text>
+				<size>16</size>
+				<align>center</align>
+				<color>16711680</color>
+			</controlProperties>
+		</control>
+	</controls>
+</mockup>
