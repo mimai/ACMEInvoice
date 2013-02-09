@@ -8,14 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@class Invoice;
+@class CardPayment;
+
 @interface SSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, strong) NSString *businessName;
-@property (nonatomic, strong) NSString *addressLine1;
-@property (nonatomic, strong) NSString *addressLine2;
-@property (nonatomic, strong) NSString *addressLine3;
-@property (nonatomic, strong) NSNumber *taxRate;
+@property (strong, nonatomic) NSString *businessName;
+@property (strong, nonatomic) NSString *addressLine1;
+@property (strong, nonatomic) NSString *addressLine2;
+@property (strong, nonatomic) NSString *addressLine3;
+@property (strong, nonatomic) NSNumber *taxRate;
+
+@property (strong, nonatomic) Invoice *currentInvoice;
+@property (strong, nonatomic) CardPayment *currentCardPayment;
+
++ (SSAppDelegate*)delegate;
+
+- (Invoice*)createInvoice;
+- (CardPayment*)createCardPayment;
 
 @end

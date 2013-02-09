@@ -1,5 +1,5 @@
 //
-//  SSPaymentViewController.h
+//  SSSSInvoiceViewController.h
 //  ACMEInvoice
 //
 //  Created by Michael Imai on 2013-02-08.
@@ -8,13 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class Invoice;
-
-@interface SSPaymentViewController : UIViewController
+@interface SSNewInvoiceViewController : UIViewController
 <
 UITextFieldDelegate
 >
-
-@property (strong, nonatomic) Invoice *invoice;
 
 @end

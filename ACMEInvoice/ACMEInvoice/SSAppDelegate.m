@@ -8,7 +8,14 @@
 
 #import "SSAppDelegate.h"
 
+#import "Invoice.h"
+#import "CardPayment.h"
+
 @implementation SSAppDelegate
+
++ (SSAppDelegate*) delegate {
+    return (SSAppDelegate*)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -49,6 +56,22 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark -- invoice
+
+- (Invoice*)createInvoice
+{
+    Invoice *newInvoice = [[Invoice alloc] init];
+    
+    return newInvoice;
+}
+
+- (CardPayment*)createCardPayment
+{
+    CardPayment *newCardPayment = [[CardPayment alloc] init];
+    
+    return newCardPayment;
 }
 
 #pragma mark -- Launching from URL
