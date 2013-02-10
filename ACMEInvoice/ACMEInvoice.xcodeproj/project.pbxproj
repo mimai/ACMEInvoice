@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0725C716C840C400BB1D9C /* SSInvoiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0725C616C840C400BB1D9C /* SSInvoiceManager.m */; };
 		BD5B82B216C56F5D007CEF0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5B82B116C56F5D007CEF0D /* UIKit.framework */; };
 		BD5B82B416C56F5D007CEF0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5B82B316C56F5D007CEF0D /* Foundation.framework */; };
 		BD5B82B616C56F5D007CEF0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD5B82B516C56F5D007CEF0D /* CoreGraphics.framework */; };
@@ -41,7 +42,12 @@
 		BD5B831616C5B403007CEF0D /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD5B831416C5B403007CEF0D /* logo@2x.png */; };
 		BD5B831916C5C092007CEF0D /* Invoice.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B831816C5C092007CEF0D /* Invoice.m */; };
 		BD5B831C16C5D97B007CEF0D /* CardPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5B831B16C5D97B007CEF0D /* CardPayment.m */; };
-		BDF56D2316C70E7700E30827 /* SSInvoiceListSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56D2216C70E7700E30827 /* SSInvoiceListSplitViewController.m */; };
+		BD67F1F316C75DA300D63765 /* 33-cabinet.png in Resources */ = {isa = PBXBuildFile; fileRef = BD67F1EF16C75DA300D63765 /* 33-cabinet.png */; };
+		BD67F1F416C75DA300D63765 /* 33-cabinet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD67F1F016C75DA300D63765 /* 33-cabinet@2x.png */; };
+		BD67F1F516C75DA300D63765 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = BD67F1F116C75DA300D63765 /* 123-id-card.png */; };
+		BD67F1F616C75DA300D63765 /* 123-id-card@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD67F1F216C75DA300D63765 /* 123-id-card@2x.png */; };
+		BDF56D2616C71BDE00E30827 /* SSInvoiceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56D2516C71BDE00E30827 /* SSInvoiceListViewController.m */; };
+		BDF56D2916C71E6F00E30827 /* SSInvoiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF56D2816C71E6F00E30827 /* SSInvoiceDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD0725C516C840C400BB1D9C /* SSInvoiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSInvoiceManager.h; sourceTree = "<group>"; };
+		BD0725C616C840C400BB1D9C /* SSInvoiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSInvoiceManager.m; sourceTree = "<group>"; };
 		BD5B82AE16C56F5D007CEF0D /* ACMEInvoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACMEInvoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5B82B116C56F5D007CEF0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BD5B82B316C56F5D007CEF0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,8 +107,14 @@
 		BD5B831816C5C092007CEF0D /* Invoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invoice.m; sourceTree = "<group>"; };
 		BD5B831A16C5D97B007CEF0D /* CardPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardPayment.h; sourceTree = "<group>"; };
 		BD5B831B16C5D97B007CEF0D /* CardPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardPayment.m; sourceTree = "<group>"; };
-		BDF56D2116C70E7700E30827 /* SSInvoiceListSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSInvoiceListSplitViewController.h; sourceTree = "<group>"; };
-		BDF56D2216C70E7700E30827 /* SSInvoiceListSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSInvoiceListSplitViewController.m; sourceTree = "<group>"; };
+		BD67F1EF16C75DA300D63765 /* 33-cabinet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "33-cabinet.png"; sourceTree = "<group>"; };
+		BD67F1F016C75DA300D63765 /* 33-cabinet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "33-cabinet@2x.png"; sourceTree = "<group>"; };
+		BD67F1F116C75DA300D63765 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
+		BD67F1F216C75DA300D63765 /* 123-id-card@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card@2x.png"; sourceTree = "<group>"; };
+		BDF56D2416C71BDE00E30827 /* SSInvoiceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSInvoiceListViewController.h; sourceTree = "<group>"; };
+		BDF56D2516C71BDE00E30827 /* SSInvoiceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSInvoiceListViewController.m; sourceTree = "<group>"; };
+		BDF56D2716C71E6F00E30827 /* SSInvoiceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSInvoiceDetailViewController.h; sourceTree = "<group>"; };
+		BDF56D2816C71E6F00E30827 /* SSInvoiceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSInvoiceDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,10 +189,14 @@
 				BD5B82D416C56F5D007CEF0D /* SSProfileViewController.m */,
 				BD5B831016C591A3007CEF0D /* SSPaymentViewController.h */,
 				BD5B831116C591A3007CEF0D /* SSPaymentViewController.m */,
-				BDF56D2116C70E7700E30827 /* SSInvoiceListSplitViewController.h */,
-				BDF56D2216C70E7700E30827 /* SSInvoiceListSplitViewController.m */,
+				BDF56D2416C71BDE00E30827 /* SSInvoiceListViewController.h */,
+				BDF56D2516C71BDE00E30827 /* SSInvoiceListViewController.m */,
+				BDF56D2716C71E6F00E30827 /* SSInvoiceDetailViewController.h */,
+				BDF56D2816C71E6F00E30827 /* SSInvoiceDetailViewController.m */,
 				BD5B831716C5C092007CEF0D /* Invoice.h */,
 				BD5B831816C5C092007CEF0D /* Invoice.m */,
+				BD0725C516C840C400BB1D9C /* SSInvoiceManager.h */,
+				BD0725C616C840C400BB1D9C /* SSInvoiceManager.m */,
 				BD5B831A16C5D97B007CEF0D /* CardPayment.h */,
 				BD5B831B16C5D97B007CEF0D /* CardPayment.m */,
 				BD5B830316C58418007CEF0D /* Assets */,
@@ -225,6 +243,10 @@
 			children = (
 				BD5B830C16C589BA007CEF0D /* Invoice_background.png */,
 				BD5B830D16C589BA007CEF0D /* Invoice_background@2x.png */,
+				BD67F1EF16C75DA300D63765 /* 33-cabinet.png */,
+				BD67F1F016C75DA300D63765 /* 33-cabinet@2x.png */,
+				BD67F1F116C75DA300D63765 /* 123-id-card.png */,
+				BD67F1F216C75DA300D63765 /* 123-id-card@2x.png */,
 				BD5B830416C58418007CEF0D /* 104-index-cards.png */,
 				BD5B830516C58418007CEF0D /* 104-index-cards@2x.png */,
 				BD5B830816C585FD007CEF0D /* 172-pricetag.png */,
@@ -326,6 +348,10 @@
 				BD5B830F16C589BA007CEF0D /* Invoice_background@2x.png in Resources */,
 				BD5B831516C5B403007CEF0D /* logo.png in Resources */,
 				BD5B831616C5B403007CEF0D /* logo@2x.png in Resources */,
+				BD67F1F316C75DA300D63765 /* 33-cabinet.png in Resources */,
+				BD67F1F416C75DA300D63765 /* 33-cabinet@2x.png in Resources */,
+				BD67F1F516C75DA300D63765 /* 123-id-card.png in Resources */,
+				BD67F1F616C75DA300D63765 /* 123-id-card@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +393,9 @@
 				BD5B831216C591A3007CEF0D /* SSPaymentViewController.m in Sources */,
 				BD5B831916C5C092007CEF0D /* Invoice.m in Sources */,
 				BD5B831C16C5D97B007CEF0D /* CardPayment.m in Sources */,
-				BDF56D2316C70E7700E30827 /* SSInvoiceListSplitViewController.m in Sources */,
+				BDF56D2616C71BDE00E30827 /* SSInvoiceListViewController.m in Sources */,
+				BDF56D2916C71E6F00E30827 /* SSInvoiceDetailViewController.m in Sources */,
+				BD0725C716C840C400BB1D9C /* SSInvoiceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

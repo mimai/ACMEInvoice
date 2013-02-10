@@ -9,10 +9,26 @@
 #import "CardPayment.h"
 
 @interface CardPayment ()
+@property (strong, nonatomic) NSString *appName;
+
 -(void)runPayfirma:(NSString*)transactionType;
 @end
 
 @implementation CardPayment
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.appName = @"ACMEInvoice";
+        self.refundTransactionID = @"";
+        self.description = @"test";
+        self.amount = [NSNumber numberWithDouble:0.0f];
+        self.email = @"mimai@shaw.ca";
+    }
+
+    return self;
+}
 
 - (void)submitForPayment
 {
@@ -42,8 +58,9 @@
         returnType = @"yes";
     }
     
-    NSString *urlFormatString = @"payfirma://process?amount=%@&transaction_type=%@&description=%@&email=%@&orig_id=%@&sending_app=%@&auto_return=%@&return_url=temp://return";
-    NSString *urlString = [NSString stringWithFormat:urlFormatString, amountTxt, transactionType, descriptionTxt, emailTxt, transactionID, _appName, returnType];
+    NSString *returnUrl = [NSString stringWithFormat:@"%@://return", _appName];
+    NSString *urlFormatString = @"payfirma://process?amount=%@&transaction_type=%@&description=%@&email=%@&orig_id=%@&sending_app=%@&auto_return=%@&return_url=%@";
+    NSString *urlString = [NSString stringWithFormat:urlFormatString, amountTxt, transactionType, descriptionTxt, emailTxt, transactionID, _appName, returnType, returnUrl];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 

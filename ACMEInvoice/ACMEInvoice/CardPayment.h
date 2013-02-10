@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSString *email;
 @property (nonatomic) BOOL autoReturn;
 
-@property (strong, nonatomic) NSString *appName;
+@property (readonly, nonatomic) NSString *appName;
 
 - (void)submitForPayment;
 - (void)submitForAutorization;

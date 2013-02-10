@@ -56,5 +56,16 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.ACMEInvoice</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ACMEInvoice</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

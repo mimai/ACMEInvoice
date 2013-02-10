@@ -15,8 +15,14 @@
 @property (strong, nonatomic) NSNumber *amount;
 @property (readonly, nonatomic) NSNumber *taxAmount;
 @property (readonly, nonatomic) NSNumber *totalAmount;
+@property (strong, nonatomic) NSString *refundTransactionID;
+@property (strong, nonatomic) NSString *email;
+@property (nonatomic) BOOL autoReturn;
 
-//- (id)initWithName:(NSString*)customerName serviceDescription:(NSString*)description amount:(NSNumber*)amount;
-- (void)calculateTax:(NSNumber*)taxRate;
+@property (readonly, nonatomic) NSString *appName;
+
+- (void)submitForPayment;
+- (void)submitForAutorization;
+- (void)submitForRefund;
 
 @end

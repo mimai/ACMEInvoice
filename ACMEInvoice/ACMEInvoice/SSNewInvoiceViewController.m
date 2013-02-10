@@ -61,21 +61,9 @@
 
 #pragma mark - button actions
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Make sure your segue name in storyboard is the same as this line
-    if ([segue.destinationViewController respondsToSelector:@selector(setInvoice:)]) {
-        [segue.destinationViewController performSelector:@selector(setInvoice:)
-                                              withObject:_currentInvoice];
-    } 
-}
-
 - (IBAction)proceedToPaymentButtonPress:(id)sender
 {
-    SSAppDelegate *appDelegate = [SSAppDelegate delegate];
-    appDelegate.currentInvoice = _currentInvoice;
-    
-    [self performSegueWithIdentifier:@"ProceedToPayment" sender:sender];
+    [_currentInvoice submitForAutorization];
 }
 
 #pragma mark - text field delegate methods
@@ -99,15 +87,15 @@
             NSNumber *amount = [NSNumber numberWithDouble:[textField.text doubleValue]];
             _currentInvoice.amount = amount;
             
-            [_currentInvoice calculateTax:appDelegate.taxRate];
-            
-            // update display fields
-            NSString *formattedAmount = [NSString stringWithFormat:@"$%.2f", amount.doubleValue];
-            _amountTextField.text = formattedAmount;
-            NSString *formattedTaxAmount = [NSString stringWithFormat:@"$%.2f", _currentInvoice.taxAmount.doubleValue];
-            _taxAmoutTextField.text = formattedTaxAmount;
-            NSString *formattedTotalAmount = [NSString stringWithFormat:@"$%.2f", _currentInvoice.totalAmount.doubleValue];
-            _invoiceAmountTextField.text = formattedTotalAmount;
+//            [_currentInvoice calculateTax:appDelegate.taxRate];
+//            
+//            // update display fields
+//            NSString *formattedAmount = [NSString stringWithFormat:@"$%.2f", amount.doubleValue];
+//            _amountTextField.text = formattedAmount;
+//            NSString *formattedTaxAmount = [NSString stringWithFormat:@"$%.2f", _currentInvoice.taxAmount.doubleValue];
+//            _taxAmoutTextField.text = formattedTaxAmount;
+//            NSString *formattedTotalAmount = [NSString stringWithFormat:@"$%.2f", _currentInvoice.totalAmount.doubleValue];
+//            _invoiceAmountTextField.text = formattedTotalAmount;
         }
     }
     

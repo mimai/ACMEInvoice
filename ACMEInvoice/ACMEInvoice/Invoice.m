@@ -11,31 +11,63 @@
 @interface Invoice ()
 @property (strong, nonatomic) NSNumber *taxAmount;
 @property (strong, nonatomic) NSNumber *totalAmount;
+@property (strong, nonatomic) NSString *appName;
+
+-(void)runPayfirma:(NSString*)transactionType;
 @end
 
 @implementation Invoice
 
-//- (id)initWithName:(NSString*)customerName serviceDescription:(NSString*)description amount:(NSNumber*)amount
-//{
-//    self = [super init];
-//    if (self) {
-//        self.customerName = customerName;
-//        self.description = description;
-//        self.amount = amount;
-//        self.taxAmount = [NSNumber numberWithDouble:0.0f];
-//        self.totalAmount = amount;
-//    }
-//    
-//    return self;
-//}
-//
-- (void)calculateTax:(NSNumber*)taxRate
+- (id)init
 {
-    double taxAmount = _amount.doubleValue * taxRate.doubleValue / 100.0f;
-    self.taxAmount = [NSNumber numberWithDouble:taxAmount];
+    self = [super init];
+    if (self) {
+        self.appName = @"ACMEInvoice";
+        self.refundTransactionID = @"";
+        self.description = @"test";
+        self.email = @"mimai@shaw.ca";
+        self.amount = [NSNumber numberWithDouble:0.0f];
+        self.taxAmount = [NSNumber numberWithDouble:0.0f];
+        self.totalAmount = _amount;
+        
+        _autoReturn = YES;
+    }
     
-    double totalAmount = _amount.doubleValue + taxAmount;
-    self.totalAmount = [NSNumber numberWithDouble:totalAmount];
+    return self;
+}
+
+- (void)submitForPayment
+{
+    [self runPayfirma:@"sale"];
+}
+
+- (void)submitForAutorization
+{
+    [self runPayfirma:@"auth"];
+}
+
+- (void)submitForRefund
+{
+    [self runPayfirma:@"refund"];
+}
+
+-(void)runPayfirma:(NSString*)transactionType
+{
+    NSString *descriptionTxt = [_description stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    NSString *transactionID = [_refundTransactionID stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    NSString *amountTxt = [[NSString stringWithFormat:@"%.2f", _amount.doubleValue] stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    NSString *emailTxt = [_email stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    
+    NSString *returnType = @"no";
+    if (_autoReturn)
+    {
+        returnType = @"yes";
+    }
+    
+    NSString *returnUrl = [NSString stringWithFormat:@"%@://return", _appName];
+    NSString *urlFormatString = @"payfirma://process?amount=%@&transaction_type=%@&description=%@&email=%@&orig_id=%@&sending_app=%@&auto_return=%@&return_url=%@";
+    NSString *urlString = [NSString stringWithFormat:urlFormatString, amountTxt, transactionType, descriptionTxt, emailTxt, transactionID, _appName, returnType, returnUrl];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
 @end
