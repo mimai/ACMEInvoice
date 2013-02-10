@@ -1,0 +1,39 @@
+
+<mockup version="1.0" skin="sketch" measuredW="1338" measuredH="968" mockupW="1338" mockupH="968">
+	<controls>
+		<control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" w="1030" h="47" measuredH="47" measuredW="1030" x="148" y="114" zOrder="6" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Payment</text>
+				<size>22</size>
+				<align>center</align>
+				<color>8554646</color>
+			</controlProperties>
+		</control>
+		<control controlID="7" controlTypeID="com.balsamiq.mockups::Canvas" w="1178" h="922" measuredH="922" measuredW="1178" x="86" y="40" zOrder="7" isInGroup="-1" locked="false" >
+			<controlProperties>
+			</controlProperties>
+		</control>
+		<control controlID="8" controlTypeID="com.balsamiq.mockups::MenuBar" w="1023" h="54" measuredH="54" measuredW="1023" x="162" y="831" zOrder="8" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Invoice, History, Settings</text>
+				<size>34</size>
+				<selectedIndex>1</selectedIndex>
+				<align>left</align>
+			</controlProperties>
+		</control>
+		<control controlID="9" controlTypeID="com.balsamiq.mockups::TitleWindow" w="1023" h="693" measuredH="693" measuredW="1023" x="162" y="138" zOrder="9" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Invoices, Invoice Detail</text>
+				<size>14</size>
+				<align>center</align>
+			</controlProperties>
+		</control>
+		<control controlID="10" controlTypeID="com.balsamiq.mockups::iPhoneMenu" w="320" h="392" measuredH="392" measuredW="320" x="162" y="181" zOrder="10" isInGroup="-1" locked="false" >
+			<controlProperties>
+				<text>Invoice 1%%0A Invoice 2%%0A Invoice 3</text>
+				<size>16</size>
+				<align>left</align>
+			</controlProperties>
+		</control>
+	</controls>
+</mockup>
