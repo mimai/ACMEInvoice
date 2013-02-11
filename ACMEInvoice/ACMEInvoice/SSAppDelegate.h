@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class Invoice;
-@class CardPayment;
 
 @interface SSAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -22,11 +21,9 @@
 @property (strong, nonatomic) NSNumber *taxRate;
 
 @property (strong, nonatomic) Invoice *currentInvoice;
-@property (strong, nonatomic) CardPayment *currentCardPayment;
 
 + (SSAppDelegate*)delegate;
 
 - (Invoice*)createInvoice;
-- (CardPayment*)createCardPayment;
 
 @end

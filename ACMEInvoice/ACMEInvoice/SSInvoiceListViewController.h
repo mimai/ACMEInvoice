@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class APSplitViewController;
 @class SSInvoiceDetailViewController;
 
 @interface SSInvoiceListViewController : UITableViewController
 
 @property (strong, nonatomic) SSInvoiceDetailViewController *detailViewController;
+
+- (id)initWithSplit:(APSplitViewController*)split;
 
 @end

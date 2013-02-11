@@ -8,15 +8,39 @@
 
 #import "SSInvoiceListViewController.h"
 
+#import "APSplitViewController.h"
+
+#import "SSMasterHistoryViewController.h"
 #import "SSInvoiceDetailViewController.h"
 
 @interface SSInvoiceListViewController ()  {
     NSMutableArray *_objects;
 }
+
+@property (strong, nonatomic) APSplitViewController *split;
+
 @end
 
 @implementation SSInvoiceListViewController
 
+
+- (id)initWithSplit:(APSplitViewController*)split
+{
+    self = [super initWithStyle:UITableViewStylePlain];
+    if (self) {
+        self.split = split;
+        
+        // init detail
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+         self.detailViewController = [storyboard instantiateViewControllerWithIdentifier:@"invoiceDetailView"];
+        _detailViewController.title = NSLocalizedString(@"Detail", nil);
+        [_split pushToDetailController:self.detailViewController];
+        
+        // init list of color with root detail's color
+        _objects = [[NSMutableArray alloc] initWithCapacity:5];
+    }
+    return self;
+}
 
 - (void)awakeFromNib
 {
@@ -29,11 +53,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (SSInvoiceDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.6667f green:0.8549f blue:1.0f alpha:1.0f];
 }
 
 - (void)didReceiveMemoryWarning

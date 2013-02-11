@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *addressLine1TextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressLine2TextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressLine3TextField;
-@property (weak, nonatomic) IBOutlet UITextField *taxRateTextField;
 
 @end
 
@@ -37,9 +36,6 @@
     _addressLine1TextField.text = appDelegate.addressLine1;
     _addressLine2TextField.text = appDelegate.addressLine2;
     _addressLine3TextField.text = appDelegate.addressLine3;
-    
-    NSString *taxRate = [NSString stringWithFormat:@"%.1f", appDelegate.taxRate.doubleValue];
-    _taxRateTextField.text = taxRate;
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,12 +62,6 @@
     } else if (_addressLine3TextField == textField) {
         // TODO: need to validate if address is non-trivial, eg., "  "
         appDelegate.addressLine3 = _addressLine3TextField.text;
-    } else if (_taxRateTextField == textField) {
-        if (_taxRateTextField.text.length) {
-            
-            NSNumber *taxRate = [NSNumber numberWithDouble:[textField.text doubleValue]];
-            appDelegate.taxRate = taxRate;
-        }
     }
 }
 

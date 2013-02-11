@@ -9,7 +9,6 @@
 #import "SSAppDelegate.h"
 
 #import "Invoice.h"
-#import "CardPayment.h"
 
 @implementation SSAppDelegate
 
@@ -65,13 +64,6 @@
     Invoice *newInvoice = [[Invoice alloc] init];
     
     return newInvoice;
-}
-
-- (CardPayment*)createCardPayment
-{
-    CardPayment *newCardPayment = [[CardPayment alloc] init];
-    
-    return newCardPayment;
 }
 
 #pragma mark -- Launching from URL
