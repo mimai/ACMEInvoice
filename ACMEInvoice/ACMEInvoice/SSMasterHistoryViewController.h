@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SSInvoiceDetailViewController : UIViewController
+#import "APSplitViewController.h"
 
-@property (strong, nonatomic) id detailItem;
+@class SSInvoiceListViewController;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@interface SSMasterHistoryViewController : APSplitViewController
+
+@property (nonatomic, readonly) SSInvoiceListViewController *masterViewController;
+
 @end
