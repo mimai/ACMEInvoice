@@ -9,9 +9,12 @@
 #import "Invoice.h"
 
 @interface Invoice ()
-@property (strong, nonatomic) NSNumber *taxAmount;
-@property (strong, nonatomic) NSNumber *totalAmount;
+@property (strong, nonatomic) NSString *taxAmount;
+@property (strong, nonatomic) NSString *totalAmount;
 @property (strong, nonatomic) NSString *appName;
+
+@property (strong, nonatomic) NSString *transactionID;
+@property (strong, nonatomic) NSString *transactionDate;
 
 -(void)runPayfirma:(NSString*)transactionType;
 @end
@@ -27,8 +30,11 @@
         self.description = @"test";
         self.email = @"mimai@shaw.ca";
         self.amount = [NSNumber numberWithDouble:0.0f];
-        self.taxAmount = [NSNumber numberWithDouble:0.0f];
-        self.totalAmount = _amount;
+        self.taxAmount = @"0.00";
+        self.totalAmount = @"0.00";
+        
+        _payfirmaReturn = nil;
+        self.transactionResult = @" ";
         
         _autoReturn = YES;
     }
@@ -68,6 +74,25 @@
     NSString *urlFormatString = @"payfirma://process?amount=%@&transaction_type=%@&description=%@&email=%@&orig_id=%@&sending_app=%@&auto_return=%@&return_url=%@";
     NSString *urlString = [NSString stringWithFormat:urlFormatString, amountTxt, transactionType, descriptionTxt, emailTxt, transactionID, _appName, returnType, returnUrl];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+}
+
+- (void)setPayfirmaReturn:(NSDictionary *)returnFromPayfirma
+{
+    _payfirmaReturn = returnFromPayfirma;
+    
+    NSString *result = [_payfirmaReturn objectForKey:@"result"];
+    
+    if (NSOrderedSame == [result compare:@"Approved" options:NSCaseInsensitiveSearch]) {
+        self.taxAmount = [_payfirmaReturn objectForKey:@"tax"];
+        self.totalAmount = [_payfirmaReturn objectForKey:@"total"];
+        self.transactionDate = [_payfirmaReturn objectForKey:@"date"];
+        self.transactionID = [_payfirmaReturn objectForKey:@"id"];
+        // set transactionResult last since we use it as a trigger kvo
+        self.transactionResult = result;
+    } else if (NSOrderedSame == [result compare:@"Declined" options:NSCaseInsensitiveSearch]) {
+        // don't overwrite @" " unless
+        self.transactionResult = result;
+    }
 }
 
 @end

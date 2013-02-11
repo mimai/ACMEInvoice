@@ -16,7 +16,19 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Of0-yq-h1J"/>
                                 </constraints>
-                                <items/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="ZXq-rl-tGh">
+                                        <connections>
+                                            <action selector="cancelButtonBarItemPress:" destination="2" id="InX-Uw-TG8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Kc-50-m5s"/>
+                                    <barButtonItem enabled="NO" systemItem="add" id="m5w-Pg-Ocr">
+                                        <connections>
+                                            <action selector="addButtonBarItemPress:" destination="2" id="kjS-rW-nQV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Invoice_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="BbV-mC-W2t">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,7 +70,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lu4-Jl-2Nb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter invoice description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lu4-Jl-2Nb">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="U1i-ce-crm"/>
@@ -73,7 +85,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AM2-am-CgV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter customer name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AM2-am-CgV">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="H3A-eW-g5l"/>
@@ -85,26 +97,53 @@
                                     <outlet property="delegate" destination="2" id="e7d-dd-OYB"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUg-rc-pSy">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter email address to forward receipt" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVv-wz-laB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cwp-nq-Jet"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="jv5-JD-tTR"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBp-an-aqo">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joI-4T-zFV">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="jxI-On-yOG"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="2" id="ntS-HH-Sin"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Taxes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-Ke-Jbj">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBy-07-iF8">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiS-JV-ua2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="999" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUF-Zr-f1A">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="XQR-TK-MgU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="ALP-hD-5GO"/>
+                                </connections>
+                            </textField>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Taxes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-Ke-Jbj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiS-JV-ua2">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="dee-8U-4HQ"/>
@@ -112,15 +151,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u46-Xe-Nt8">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u46-Xe-Nt8">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyo-gi-UcV">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyo-gi-UcV">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="nXB-VR-LcK"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -146,6 +182,46 @@
                                     <constraint firstAttribute="width" constant="150" id="LEm-ck-Gj6"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Transaction ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIX-Pl-GAV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="OYy-eC-fvX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-BO-joL">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lhv-Wg-gp2"/>
+                                    <constraint firstAttribute="width" constant="655" id="dat-hQ-hXN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qX-sF-F9R">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZU9-RU-vnh">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZWf-ml-opC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-N8-U9J">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ot3-ed-8eW">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yzD-vh-9T6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -158,59 +234,99 @@
                             <constraint firstItem="lu4-Jl-2Nb" firstAttribute="bottom" secondItem="joI-4T-zFV" secondAttribute="bottom" type="default" id="4H7-AH-CUr"/>
                             <constraint firstItem="BbV-mC-W2t" firstAttribute="bottom" secondItem="17" secondAttribute="bottom" type="default" id="52F-a1-tBY"/>
                             <constraint firstAttribute="bottom" secondItem="8Zi-FY-4NP" secondAttribute="bottom" constant="41" id="6jS-JZ-bgC"/>
+                            <constraint firstItem="YVv-wz-laB" firstAttribute="leading" secondItem="cJF-Tj-9Kl" secondAttribute="leading" type="default" id="767-Uj-d7W"/>
+                            <constraint firstItem="Ot3-ed-8eW" firstAttribute="leading" secondItem="ZU9-RU-vnh" secondAttribute="leading" type="default" id="7Hp-nb-PLE"/>
                             <constraint firstItem="o3J-wn-lMx" firstAttribute="top" secondItem="17" secondAttribute="top" constant="83" id="7lM-5w-Qjl"/>
                             <constraint firstItem="20" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="82v-FK-dPD"/>
+                            <constraint firstItem="JsS-N8-U9J" firstAttribute="trailing" secondItem="1qX-sF-F9R" secondAttribute="trailing" type="default" id="8K9-Pj-SWj"/>
+                            <constraint firstItem="MUg-rc-pSy" firstAttribute="top" secondItem="AM2-am-CgV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8zH-fs-EjZ"/>
                             <constraint firstItem="afY-ug-HGm" firstAttribute="trailing" secondItem="5Um-ts-l7C" secondAttribute="trailing" type="default" id="ANX-B9-z3H"/>
                             <constraint firstItem="5Um-ts-l7C" firstAttribute="trailing" secondItem="o3J-wn-lMx" secondAttribute="trailing" type="default" id="Anz-ha-GaX"/>
                             <constraint firstItem="o3J-wn-lMx" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="25" id="BeO-Lo-2eD"/>
+                            <constraint firstItem="TIX-Pl-GAV" firstAttribute="leading" secondItem="lu4-Jl-2Nb" secondAttribute="leading" type="default" id="CaL-Q6-eNV"/>
+                            <constraint firstAttribute="bottom" secondItem="OfV-Ke-Jbj" secondAttribute="bottom" constant="201" id="Cg6-D8-rBA"/>
                             <constraint firstItem="5Um-ts-l7C" firstAttribute="leading" secondItem="o3J-wn-lMx" secondAttribute="leading" type="default" id="DiQ-TT-9E3"/>
+                            <constraint firstItem="lu4-Jl-2Nb" firstAttribute="trailing" secondItem="Eex-BO-joL" secondAttribute="trailing" type="default" id="Eaw-ac-RT5"/>
                             <constraint firstItem="BbV-mC-W2t" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="FIV-z3-55W"/>
+                            <constraint firstItem="YVv-wz-laB" firstAttribute="top" secondItem="MUg-rc-pSy" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HQ4-1M-MhL"/>
+                            <constraint firstItem="YVv-wz-laB" firstAttribute="leading" secondItem="MUg-rc-pSy" secondAttribute="leading" type="default" id="J8C-QE-Ffo"/>
+                            <constraint firstItem="1qX-sF-F9R" firstAttribute="leading" secondItem="TIX-Pl-GAV" secondAttribute="leading" type="default" id="JNe-SN-H6m"/>
                             <constraint firstItem="afY-ug-HGm" firstAttribute="top" secondItem="17" secondAttribute="top" constant="147" id="Jm0-aL-vFF"/>
                             <constraint firstItem="f9M-k8-SOp" firstAttribute="leading" secondItem="BAZ-oR-FSW" secondAttribute="leading" type="default" id="MGZ-Q0-67G"/>
                             <constraint firstItem="u46-Xe-Nt8" firstAttribute="leading" secondItem="OfV-Ke-Jbj" secondAttribute="leading" type="default" id="Mok-ha-qSQ"/>
+                            <constraint firstItem="cJF-Tj-9Kl" firstAttribute="top" secondItem="YVv-wz-laB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NqM-rC-dSn"/>
+                            <constraint firstAttribute="bottom" secondItem="1qX-sF-F9R" secondAttribute="bottom" constant="125" id="O1b-Qy-vE6"/>
                             <constraint firstItem="joI-4T-zFV" firstAttribute="leading" secondItem="rBp-an-aqo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="O8t-oM-NZJ"/>
+                            <constraint firstItem="rBy-07-iF8" firstAttribute="top" secondItem="17" secondAttribute="top" constant="304" id="OSH-6K-qsl"/>
+                            <constraint firstAttribute="bottom" secondItem="rBp-an-aqo" secondAttribute="bottom" constant="240" id="P0x-Hn-2sw"/>
                             <constraint firstItem="oiS-JV-ua2" firstAttribute="leading" secondItem="joI-4T-zFV" secondAttribute="leading" type="default" id="Q1e-XJ-j0b"/>
-                            <constraint firstItem="AM2-am-CgV" firstAttribute="trailing" secondItem="lu4-Jl-2Nb" secondAttribute="trailing" type="default" id="Srw-qg-6z5"/>
+                            <constraint firstItem="ZU9-RU-vnh" firstAttribute="top" secondItem="Eex-BO-joL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RGU-H6-Hp3"/>
+                            <constraint firstItem="MUg-rc-pSy" firstAttribute="leading" secondItem="AM2-am-CgV" secondAttribute="leading" type="default" id="SKS-Pc-ElX"/>
                             <constraint firstItem="5Um-ts-l7C" firstAttribute="leading" secondItem="afY-ug-HGm" secondAttribute="leading" type="default" id="Syr-Qe-AcV"/>
-                            <constraint firstAttribute="bottom" secondItem="rBp-an-aqo" secondAttribute="bottom" constant="307" id="TZu-Xs-3mm"/>
+                            <constraint firstItem="TIX-Pl-GAV" firstAttribute="baseline" secondItem="u46-Xe-Nt8" secondAttribute="baseline" type="default" id="T0o-1C-Vgo"/>
                             <constraint firstItem="oiS-JV-ua2" firstAttribute="leading" secondItem="OfV-Ke-Jbj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Us9-T8-IoV"/>
-                            <constraint firstItem="AM2-am-CgV" firstAttribute="leading" secondItem="cJF-Tj-9Kl" secondAttribute="leading" type="default" id="ZTg-ww-UOA"/>
-                            <constraint firstItem="cJF-Tj-9Kl" firstAttribute="top" secondItem="AM2-am-CgV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ZjO-pd-CBl"/>
-                            <constraint firstAttribute="bottom" secondItem="OfV-Ke-Jbj" secondAttribute="bottom" constant="268" id="b5w-Dr-wVL"/>
+                            <constraint firstItem="Eex-BO-joL" firstAttribute="bottom" secondItem="nyo-gi-UcV" secondAttribute="bottom" type="default" id="V4w-XR-JoV"/>
+                            <constraint firstItem="YVv-wz-laB" firstAttribute="trailing" secondItem="AM2-am-CgV" secondAttribute="trailing" type="default" id="X79-GU-pXg"/>
+                            <constraint firstItem="JsS-N8-U9J" firstAttribute="leading" secondItem="1qX-sF-F9R" secondAttribute="leading" type="default" id="Y19-Ot-FyP"/>
+                            <constraint firstItem="Eex-BO-joL" firstAttribute="top" secondItem="nyo-gi-UcV" secondAttribute="top" type="default" id="ZAN-oj-Vfb"/>
+                            <constraint firstAttribute="bottom" secondItem="JsS-N8-U9J" secondAttribute="bottom" constant="87" id="ZkU-oZ-ahf"/>
+                            <constraint firstAttribute="bottom" secondItem="TIX-Pl-GAV" secondAttribute="bottom" constant="163" id="aFU-hd-WGU"/>
                             <constraint firstItem="AM2-am-CgV" firstAttribute="top" secondItem="f9M-k8-SOp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bMh-Rl-AgN"/>
                             <constraint firstItem="f9M-k8-SOp" firstAttribute="top" secondItem="17" secondAttribute="top" constant="271" id="cWx-Rn-Uc9"/>
                             <constraint firstItem="OfV-Ke-Jbj" firstAttribute="leading" secondItem="rBp-an-aqo" secondAttribute="leading" type="default" id="cyx-Kq-iwS"/>
                             <constraint firstItem="nyo-gi-UcV" firstAttribute="leading" secondItem="oiS-JV-ua2" secondAttribute="leading" type="default" id="dWP-ZQ-Ixc"/>
                             <constraint firstItem="nyo-gi-UcV" firstAttribute="top" secondItem="oiS-JV-ua2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="e84-P0-Kr6"/>
+                            <constraint firstItem="ZU9-RU-vnh" firstAttribute="trailing" secondItem="Eex-BO-joL" secondAttribute="trailing" type="default" id="eMb-rQ-Vah"/>
                             <constraint firstItem="lu4-Jl-2Nb" firstAttribute="leading" secondItem="cJF-Tj-9Kl" secondAttribute="leading" type="default" id="ehQ-TA-moJ"/>
+                            <constraint firstItem="ZU9-RU-vnh" firstAttribute="leading" secondItem="Eex-BO-joL" secondAttribute="leading" type="default" id="eon-aR-o5V"/>
                             <constraint firstItem="nyo-gi-UcV" firstAttribute="leading" secondItem="u46-Xe-Nt8" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fYc-9a-QDt"/>
                             <constraint firstAttribute="trailing" secondItem="jKT-r3-Fod" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ff8-13-A6a"/>
-                            <constraint firstAttribute="bottom" secondItem="u46-Xe-Nt8" secondAttribute="bottom" constant="230" id="fhi-Nu-z0D"/>
                             <constraint firstItem="jKT-r3-Fod" firstAttribute="top" secondItem="o3J-wn-lMx" secondAttribute="top" type="default" id="glN-46-abn"/>
+                            <constraint firstItem="1qX-sF-F9R" firstAttribute="trailing" secondItem="TIX-Pl-GAV" secondAttribute="trailing" type="default" id="hoj-IH-Pas"/>
+                            <constraint firstItem="YVv-wz-laB" firstAttribute="trailing" secondItem="lu4-Jl-2Nb" secondAttribute="trailing" type="default" id="hvw-hV-6Rh"/>
                             <constraint firstItem="20" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="i7B-V8-9lR"/>
                             <constraint firstAttribute="trailing" secondItem="oiS-JV-ua2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kGj-eP-3Uc"/>
-                            <constraint firstAttribute="bottom" secondItem="nyo-gi-UcV" secondAttribute="bottom" constant="225" id="kH2-Jx-AsT"/>
+                            <constraint firstItem="DUF-Zr-f1A" firstAttribute="bottom" secondItem="AM2-am-CgV" secondAttribute="bottom" type="default" id="lXM-rB-EWC"/>
+                            <constraint firstItem="DUF-Zr-f1A" firstAttribute="leading" secondItem="rBy-07-iF8" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="mqS-Qh-WwS"/>
+                            <constraint firstItem="Ot3-ed-8eW" firstAttribute="trailing" secondItem="ZU9-RU-vnh" secondAttribute="trailing" type="default" id="nn0-HG-4sz"/>
                             <constraint firstItem="lu4-Jl-2Nb" firstAttribute="top" secondItem="cJF-Tj-9Kl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nwC-ep-050"/>
+                            <constraint firstAttribute="trailing" secondItem="DUF-Zr-f1A" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sP4-vA-ZVX"/>
+                            <constraint firstItem="Ot3-ed-8eW" firstAttribute="top" secondItem="ZU9-RU-vnh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sjs-cy-7e3"/>
                             <constraint firstAttribute="trailing" secondItem="8Zi-FY-4NP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="slR-4y-7MK"/>
                             <constraint firstItem="BAZ-oR-FSW" firstAttribute="trailing" secondItem="afY-ug-HGm" secondAttribute="trailing" type="default" id="tW8-tB-uHY"/>
                             <constraint firstItem="BAZ-oR-FSW" firstAttribute="top" secondItem="17" secondAttribute="top" constant="181" id="vQe-Dg-B7E"/>
+                            <constraint firstAttribute="bottom" secondItem="Ot3-ed-8eW" secondAttribute="bottom" constant="82" id="wNU-ZO-Bd2"/>
                             <constraint firstAttribute="trailing" secondItem="joI-4T-zFV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wgY-7r-t3o"/>
+                            <constraint firstItem="DUF-Zr-f1A" firstAttribute="top" secondItem="AM2-am-CgV" secondAttribute="top" type="default" id="y3x-56-zQS"/>
                             <constraint firstItem="f9M-k8-SOp" firstAttribute="leading" secondItem="AM2-am-CgV" secondAttribute="leading" type="default" id="yKT-9c-KvP"/>
+                            <constraint firstItem="DUF-Zr-f1A" firstAttribute="leading" secondItem="joI-4T-zFV" secondAttribute="leading" type="default" id="zt6-OY-6LP"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Invoice" image="172-pricetag.png" id="7"/>
                     <connections>
+                        <outlet property="addBarButtonItem" destination="m5w-Pg-Ocr" id="HSY-SP-ppa"/>
                         <outlet property="addressLine1Label" destination="5Um-ts-l7C" id="QvW-PB-uLr"/>
                         <outlet property="addressLine2Label" destination="afY-ug-HGm" id="zug-fS-Zh6"/>
                         <outlet property="addressLine3Label" destination="BAZ-oR-FSW" id="d8o-xX-aSz"/>
                         <outlet property="amountTextField" destination="joI-4T-zFV" id="h9W-Ry-w78"/>
                         <outlet property="businessNameLabel" destination="o3J-wn-lMx" id="JRM-TQ-Wnx"/>
+                        <outlet property="cancelBarButtonItem" destination="ZXq-rl-tGh" id="uYE-c2-y9n"/>
                         <outlet property="clientNameTextField" destination="AM2-am-CgV" id="USP-zD-V7o"/>
+                        <outlet property="dateLabel" destination="1qX-sF-F9R" id="bhJ-kp-HQm"/>
+                        <outlet property="dateTextField" destination="ZU9-RU-vnh" id="X1T-Fi-w3S"/>
                         <outlet property="descriptionTextField" destination="lu4-Jl-2Nb" id="Jsi-Zx-9Fm"/>
+                        <outlet property="emailTextField" destination="YVv-wz-laB" id="YQi-09-iGq"/>
+                        <outlet property="invoiceAmountLabel" destination="u46-Xe-Nt8" id="MRo-YE-8xO"/>
                         <outlet property="invoiceAmountTextField" destination="nyo-gi-UcV" id="CUq-Eo-ZwM"/>
+                        <outlet property="invoiceNumber" destination="DUF-Zr-f1A" id="Hh1-vJ-Kiw"/>
                         <outlet property="proceedToPaymentButton" destination="8Zi-FY-4NP" id="uP5-lL-XhM"/>
+                        <outlet property="statusLabel" destination="JsS-N8-U9J" id="RCy-6l-JnU"/>
+                        <outlet property="statusTextField" destination="Ot3-ed-8eW" id="kFQ-En-avQ"/>
+                        <outlet property="taxAmoutLabel" destination="OfV-Ke-Jbj" id="dKb-e2-tzd"/>
                         <outlet property="taxAmoutTextField" destination="oiS-JV-ua2" id="bL1-Pl-xwP"/>
+                        <outlet property="transactionIdLabel" destination="TIX-Pl-GAV" id="hFe-n6-gZZ"/>
+                        <outlet property="transactionIdTextField" destination="Eex-BO-joL" id="Av5-C1-yfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>

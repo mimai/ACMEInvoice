@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Invoice.h"
+
 @interface SSInvoiceManager : NSObject
+
+@property (readonly, nonatomic) Invoice *currentInvoice;
+@property (readonly, nonatomic) NSArray *history;
+
++ (id)sharedInvoiceManager;
+
+- (Invoice*)createInvoice;
 
 @end

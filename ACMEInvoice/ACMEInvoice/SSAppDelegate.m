@@ -8,7 +8,7 @@
 
 #import "SSAppDelegate.h"
 
-#import "Invoice.h"
+#import "SSInvoiceManager.h"
 
 @implementation SSAppDelegate
 
@@ -57,20 +57,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark -- invoice
-
-- (Invoice*)createInvoice
-{
-    Invoice *newInvoice = [[Invoice alloc] init];
-    
-    return newInvoice;
-}
-
 #pragma mark -- Launching from URL
 
 - (BOOL)application:(UIApplication *)application
       handleOpenURL:(NSURL *)url{
-    
+
     NSString *temp = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapes( NULL, (__bridge CFStringRef)[url absoluteString], (__bridge CFStringRef)@"");
     NSArray *urlArray = [temp componentsSeparatedByString:@"?"];
     
@@ -87,12 +78,9 @@
         [pairs setObject:value forKey:key];
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data returned"
-                                                    message:[NSString stringWithFormat:@"%@", pairs]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    NSLog(@"%s: %d pairs=%@", __FUNCTION__, __LINE__, pairs);
+    SSInvoiceManager *invoiceManager = [SSInvoiceManager sharedInvoiceManager];
+    invoiceManager.currentInvoice.payfirmaReturn = pairs;
     
     return YES;
 }
@@ -118,12 +106,9 @@
         [pairs setObject:value forKey:key];
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data returned"
-                                                    message:[NSString stringWithFormat:@"%@", pairs]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    NSLog(@"%s: %d pairs=%@", __FUNCTION__, __LINE__, pairs);
+    SSInvoiceManager *invoiceManager = [SSInvoiceManager sharedInvoiceManager];
+    invoiceManager.currentInvoice.payfirmaReturn = pairs;
     
     return YES;
 }

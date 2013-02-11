@@ -24,6 +24,4 @@
 
 + (SSAppDelegate*)delegate;
 
-- (Invoice*)createInvoice;
-
 @end
