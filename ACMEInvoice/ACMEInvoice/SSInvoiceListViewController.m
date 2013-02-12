@@ -10,13 +10,14 @@
 
 #import "APSplitViewController.h"
 
+#import "SSInvoiceManager.h"
+
 #import "SSMasterHistoryViewController.h"
 #import "SSInvoiceDetailViewController.h"
 
-@interface SSInvoiceListViewController ()  {
-    NSMutableArray *_objects;
-}
+@interface SSInvoiceListViewController ()
 
+@property (strong, nonatomic) SSInvoiceManager *invoiceManager;
 @property (strong, nonatomic) APSplitViewController *split;
 
 @end
@@ -35,9 +36,7 @@
          self.detailViewController = [storyboard instantiateViewControllerWithIdentifier:@"invoiceDetailView"];
         _detailViewController.title = NSLocalizedString(@"Detail", nil);
         [_split pushToDetailController:self.detailViewController];
-        
-        // init list of color with root detail's color
-        _objects = [[NSMutableArray alloc] initWithCapacity:5];
+        self.invoiceManager = [SSInvoiceManager sharedInvoiceManager];
     }
     return self;
 }
@@ -62,16 +61,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
-{
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -81,15 +70,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _invoiceManager.history.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    Invoice *object = _invoiceManager.history[indexPath.row];
+    cell.textLabel.text = object.description;
     return cell;
 }
 
@@ -97,16 +90,6 @@
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
 }
 
 /*
@@ -127,8 +110,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *object = _objects[indexPath.row];
-    self.detailViewController.detailItem = object;
+    self.detailViewController.detailItem = _invoiceManager.history[indexPath.row];
 }
 
 @end

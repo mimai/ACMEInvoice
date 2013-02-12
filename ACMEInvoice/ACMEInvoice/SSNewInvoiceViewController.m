@@ -97,7 +97,46 @@
 
 - (IBAction)addButtonBarItemPress:(id)sender
 {
-    NSLog(@"%s: %d", __FUNCTION__, __LINE__);
+    [_currentInvoice removeObserver:self forKeyPath:@"transactionResult"];
+    
+    SSInvoiceManager *invoiceManager = [SSInvoiceManager sharedInvoiceManager];
+    self.currentInvoice = [invoiceManager createInvoice];
+    [_currentInvoice addObserver:self
+                      forKeyPath:@"transactionResult"
+                         options:NSKeyValueObservingOptionNew
+                         context:nil];
+
+    self.invoiceNumber.text = _currentInvoice.invoiceID;
+
+    // clear all entry fields
+    _descriptionTextField.text = nil;
+    _emailTextField.text = nil;
+    _clientNameTextField.text = nil;
+    _amountTextField.text = nil;
+
+    _proceedToPaymentButton.hidden = NO;
+    _addBarButtonItem.enabled = NO;
+    _cancelBarButtonItem.enabled = YES;
+    
+    _taxAmoutLabel.hidden = YES;
+    _taxAmoutTextField.hidden = YES;
+    _taxAmoutTextField.text = nil;
+    
+    _invoiceAmountLabel.hidden = YES;
+    _invoiceAmountTextField.hidden = YES;
+    _invoiceAmountTextField.text = nil;
+    
+    _dateLabel.hidden = YES;
+    _dateTextField.hidden = YES;
+    _dateTextField.text = nil;
+    
+    _transactionIdLabel.hidden = YES;
+    _transactionIdTextField.hidden = YES;
+    _transactionIdTextField.text = nil;
+    
+    _statusLabel.hidden = YES;
+    _statusTextField.hidden = YES;
+    _statusTextField.text = nil;
 }
 
 - (IBAction)cancelButtonBarItemPress:(id)sender

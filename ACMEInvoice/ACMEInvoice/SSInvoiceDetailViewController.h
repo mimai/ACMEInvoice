@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Invoice;
+
 @interface SSInvoiceDetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) Invoice *detailItem;
 
 @end

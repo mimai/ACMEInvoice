@@ -10,7 +10,7 @@
 
 @interface SSInvoiceManager ()
 @property (strong, nonatomic) Invoice *currentInvoice;
-@property (strong, nonatomic) NSMutableArray *history;
+@property (strong, nonatomic) NSMutableArray *myHistory;
 @end
 
 @implementation SSInvoiceManager
@@ -28,10 +28,15 @@
 {
     self = [super init];
     if (self) {
-        self.history = [NSMutableArray arrayWithCapacity:5];
+        self.myHistory = [NSMutableArray arrayWithCapacity:5];
     }
     
     return self;
+}
+
+- (NSArray *)history
+{
+    return _myHistory;
 }
 
 #pragma mark -- invoice
@@ -46,6 +51,8 @@
     number++;
     
     self.currentInvoice = newInvoice;
+    
+    [_myHistory addObject:newInvoice];
     
     return newInvoice;
 }
