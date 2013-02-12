@@ -41,6 +41,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelBarButtonItem;
 
+@property (nonatomic) BOOL keyboardVisible;
+
 - (IBAction)proceedToPaymentButtonPress:(id)sender;
 - (IBAction)addButtonBarItemPress:(id)sender;
 
@@ -53,6 +55,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.keyboardVisible = NO;
     self.currentInvoice = nil;
 }
 
@@ -60,6 +63,16 @@
 {
     [super viewWillAppear:animated];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector (keyboardWillShow:)
+                                                 name: UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector (keyboardWillHide:)
+                                                 name: UIKeyboardWillHideNotification
+                                               object:nil];
+
     SSAppDelegate *appDelegate = [SSAppDelegate delegate];
     self.businessNameLabel.text = appDelegate.businessName;
     self.addressLine1Label.text = appDelegate.addressLine1;
@@ -77,6 +90,18 @@
     }
     
     self.invoiceNumber.text = _currentInvoice.invoiceID;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,6 +171,40 @@
     _emailTextField.text = nil;
     _clientNameTextField.text = nil;
     _amountTextField.text = nil;
+}
+
+#pragma mark - keyboard notification methods
+
+-(void) keyboardWillShow:(NSNotification *)notif
+{
+    // If keyboard is visible, return
+    if (!self.keyboardVisible)
+    {
+        CGRect myFrame = self.view.frame;
+        myFrame.origin.y = -150.0f;
+        [UIView animateWithDuration:0.5f
+                         animations:^{
+                             self.view.frame = myFrame;
+                         }
+         ];
+        self.keyboardVisible = YES;
+    }
+}
+
+-(void) keyboardWillHide:(NSNotification *)notif
+{
+    // If keyboard is visible, return
+    if (self.keyboardVisible)
+    {
+        CGRect myFrame = self.view.frame;
+        myFrame.origin.y = 0.0f;
+        [UIView animateWithDuration:0.25f
+                         animations:^{
+                             self.view.frame = myFrame;
+                         }
+         ];
+        self.keyboardVisible = NO;
+    }
 }
 
 #pragma mark - text field delegate methods
